@@ -3,7 +3,7 @@
 ## GoT DOM - React - Typescript
 
 Crea un proyecto nuevo en React - TypeScrypt
-Reproduce el challenge Week 6 - Challenge 2
+Reproduce el challenge Week 6 - Challenge 3
 
 - Utiliza básicamente el mismo modelo de datos
   a - La misma estructura de clases -> generamos los datos
