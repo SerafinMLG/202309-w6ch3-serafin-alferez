@@ -22,7 +22,8 @@ const characterSlice = createSlice({
       state.characterState = 'loading';
       return state;
     }),
-    
+
+
     builder.addCase(loadCharacterThunk.fulfilled,
       (state: CharacterState, { payload }: PayloadAction<Character[]>) => {
         state.characters = payload;
@@ -31,6 +32,11 @@ const characterSlice = createSlice({
       }
     );
     
+    builder.addCase(loadCharacterThunk.rejected, (state: CharacterState) => {
+      state.characterState = 'error';
+      return state;
+    })
+
     builder.addCase(
       updateCharacterThunk.fulfilled,
       (state: CharacterState, { payload }: PayloadAction<Character>) => {
@@ -38,6 +44,18 @@ const characterSlice = createSlice({
           payload;
         return state;
       } 
+    )
+
+    builder.addCase(updateCharacterThunk.pending, (state: CharacterState) => {
+      state.characterState = 'loading';
+      return state;
+    }),
+
+    builder.addCase(updateCharacterThunk.rejected, (state: CharacterState) => {
+      state.characterState = 'error';
+      return state;
+    }
+
     )
     }
   });

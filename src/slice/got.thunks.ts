@@ -3,11 +3,6 @@ import { ApiRepo } from '../services/api.repo';
 import { Character } from '../model/characters';
 
 
-type Params = {
-  repo: ApiRepo;
-  newCharacter: Partial<Character>;
-};
-
 export const loadCharacterThunk = createAsyncThunk<Character[],ApiRepo>(
   'characters/load', 
   async (repo) => {

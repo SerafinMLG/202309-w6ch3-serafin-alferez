@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../store/store';
 import { ApiRepo } from '../services/api.repo';
 import { useCallback, useMemo } from 'react';
-import * as ac from '../slice/got.slice';
 import { Character } from '../model/characters';
 import { loadCharacterThunk, updateCharacterThunk } from '../slice/got.thunks';
 
