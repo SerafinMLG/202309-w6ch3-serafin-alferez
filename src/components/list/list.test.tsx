@@ -39,4 +39,3 @@ describe('Given List component ', () => {
     })
 })
 });
-
