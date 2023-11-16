@@ -6,10 +6,10 @@ type Props = {
 };
 
 export function Card({ info }: Props) {
-  const { update } = useCharacters();
+  const { updateCharacter } = useCharacters();
 
   const handleDeath = (id: string) => {
-    update(id, { isAlive: false });
+    updateCharacter(id, { isAlive: false });
   };
 
   return (
